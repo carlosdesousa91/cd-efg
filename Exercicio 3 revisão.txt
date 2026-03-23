@@ -1,0 +1,13 @@
+Qual é a diferença entre modelo físico e conceitual?
+
+O que são atributos?
+
+O que é um SGBD? Cite 2 exemplos?
+
+O que é SQL?
+
+Qual é a diferença entre Integer e String?
+
+O que é uma PK (chave primária)?
+
+Crie duas tabelas no postgreSQL.
