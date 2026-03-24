@@ -1,0 +1,95 @@
+id,name,email,age,city,signup_date
+1,Carlos,carlos@email.com,29,Brasília,2023-05-10
+2,ana,ana@email.com,34,São Paulo,2022-11-02
+3,João,joaoemail.com,25,Rio de Janeiro,2021-08-15
+4,,maria@email.com,40,Belo Horizonte,2020-01-20
+5,Pedro,pedro@email.com,-32,,2023-07-01
+6,Lucas,lucas@email.com,22,Brasília,invalid_date
+7,Fernanda,fernanda@email.com,27,São Paulo,2022-03-12
+8,Juliana,juliana@email.com,31,,2023-09-09
+9,carlos,carlos@email.com,29,Brasília,2023-05-10
+10,Ana,anaemail.com,45,Rio de Janeiro,2021-12-30
+
+
+Esse dataset está PERFEITO pra ETL porque tem:
+
+❌ Nome nulo
+❌ Nome em minúsculo (padronização)
+❌ Email inválido (sem @)
+❌ Idade negativa
+❌ Cidade vazia ou nula
+❌ Data inválida
+❌ Dados duplicados
+
+
+🔹 1. Extract (Extração)
+📌 Ler CSV com Python
+import pandas as pd
+
+df = pd.read_csv("dataset_etl_realista.csv")
+print(df.head())
+
+
+🔹 2. Transform (Transformação)
+📌 Limpeza de dados
+# remover duplicados
+df = df.drop_duplicates()
+
+# remover nomes nulos
+df = df.dropna(subset=["name"])
+
+# padronizar nomes (primeira letra maiúscula)
+df["name"] = df["name"].str.title()
+
+# remover emails inválidos
+df = df[df["email"].str.contains("@", na=False)]
+
+# remover idades inválidas
+df = df[df["age"] > 0]
+
+# preencher cidade vazia
+df["city"] = df["city"].fillna("Não informado")
+
+# corrigir datas inválidas
+df["signup_date"] = pd.to_datetime(df["signup_date"], errors="coerce")
+df = df.dropna(subset=["signup_date"])
+
+
+🔹 3. Load (Carga)
+📌 Criar tabela no PostgreSQL
+CREATE TABLE clientes_etl (
+    id INT,
+    name TEXT,
+    email TEXT,
+    age INT,
+    city TEXT,
+    signup_date DATE
+);
+
+
+📌 Inserir dados com Python
+from sqlalchemy import create_engine
+
+engine = create_engine("postgresql://usuario:senha@localhost:5432/seubanco")
+
+df.to_sql("clientes_etl", engine, if_exists="replace", index=False)
+
+
+🎯 Desafio ETL completo
+
+Objetivo: Criar um pipeline ETL completo
+
+📌 Tarefas:
+Ler o dataset
+Identificar problemas
+Corrigir dados
+Padronizar informações
+Inserir no PostgreSQL
+
+
+Você pode pedir:
+
+🔥 Criar log de erros (linhas descartadas)
+🔥 Separar dados inválidos em outra tabela
+🔥 Criar carga incremental
+🔥 Validar schema antes da carga
