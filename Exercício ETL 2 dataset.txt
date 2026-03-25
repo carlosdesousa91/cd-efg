@@ -1,0 +1,82 @@
+id_venda,produto,categoria,quantidade,preco_unitario,data_venda,cliente,cidade 
+
+1,Notebook,Eletrônicos,1,3500,2023-01-10,Carlos,Brasília 
+
+2,notebook,Eletrônicos,2,3500,2023-01-11,Ana,São Paulo 
+
+3,Mouse,Eletronicos,3,50,2023-01-12,João,Rio de Janeiro 
+
+4,Teclado,Eletrônicos,-1,120,2023-01-13,Maria,Belo Horizonte 
+
+5,Monitor,Eletrônicos,1,,2023-01-14,Pedro, 
+
+6,Cadeira,Moveis,2,800,invalid_date,Lucas,Brasília 
+
+7,Mesa,Móveis,1,1200,2023-01-16,Fernanda,São Paulo 
+
+8,mouse,Eletrônicos,2,50,2023-01-12,João,Rio de Janeiro 
+
+9,Notebook,Eletrônicos,1,3500,2023-01-10,Carlos,Brasília 
+
+10,,Eletrônicos,1,2000,2023-01-18,Ana,São Paulo 
+
+11,Impressora,Eletrônicos,1,900,2023-01-19,Juliana, 
+
+12,Cadeira,Móveis,0,800,2023-01-20,Pedro,Brasília 
+
+13,Mesa,Moveis,1,1200,2023-01-21,Larissa,São Paulo 
+
+14,Monitor,Eletrônicos,2,1200,2023-01-22,,Rio de Janeiro 
+
+15,Teclado,Eletrônicos,1,120,2023-01-23,Carlos,Brasília 
+
+
+
+📊 Relatório que o aluno deve entregar 
+
+
+📄 Relatório de Vendas 
+
+1. Total de vendas por produto 
+
+SELECT produto, SUM(quantidade) as total_vendido 
+
+FROM vendas 
+
+GROUP BY produto; 
+
+ 
+
+2. Faturamento por produto 
+
+SELECT produto, SUM(quantidade * preco_unitario) as faturamento 
+
+FROM vendas 
+
+GROUP BY produto; 
+
+ 
+
+3. Vendas por categoria 
+
+SELECT categoria, SUM(quantidade) 
+
+FROM vendas 
+
+GROUP BY categoria; 
+
+ 
+
+4. Vendas por cidade 
+
+SELECT cidade, COUNT(*) 
+
+FROM vendas 
+
+GROUP BY cidade; 
+
+ 
+
+5. Total geral faturado 
+
+SELECT SUM(quantidade * preco_unitario) FROM vendas; 
