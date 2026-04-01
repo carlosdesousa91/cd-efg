@@ -1,0 +1,50 @@
+🧪 Exercício Prático – Comando SELECT
+🎯 Objetivo
+
+Praticar:
+
+SELECT básico
+Seleção de colunas
+Uso de WHERE
+Operadores lógicos e de comparação
+
+📊 Dataset (Tabela: clientes)
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT,
+    cidade VARCHAR(100),
+    salario DECIMAL(10,2)
+);
+
+INSERT INTO clientes (nome, idade, cidade, salario) VALUES
+('Ana', 25, 'Brasília', 2500.00),
+('Bruno', 32, 'São Paulo', 3200.00),
+('Carlos', 28, 'Brasília', 2800.00),
+('Daniela', 40, 'Rio de Janeiro', 4000.00),
+('Eduardo', 22, 'Brasília', 1800.00),
+('Fernanda', 35, 'São Paulo', 3500.00),
+('Gabriel', 29, 'Belo Horizonte', 2700.00),
+('Helena', 31, 'Brasília', 3100.00);
+
+📝 Parte 1 – Consultas Básicas
+Liste todos os dados da tabela clientes.
+Liste apenas os nomes e idades dos clientes.
+Liste os clientes que moram em Brasília.
+
+📝 Parte 2 – Filtros com WHERE
+Liste os clientes com idade maior que 30.
+Liste os clientes com salário menor que 3000.
+Liste os clientes com idade entre 25 e 35.
+
+📝 Parte 3 – Operadores Lógicos
+Liste os clientes que moram em Brasília e têm idade maior que 30.
+Liste os clientes que moram em São Paulo ou têm salário maior que 3500.
+
+Liste os clientes que não moram em Brasília.
+📝 Parte 4 – Desafio
+Liste nome, cidade e salário dos clientes que:
+têm salário maior que 2500
+e idade menor que 35
+
+
