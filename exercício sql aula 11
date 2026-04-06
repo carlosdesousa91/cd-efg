@@ -1,0 +1,69 @@
+🔹 simples:
+SELECT COUNT(*) FROM vendas;
+SELECT SUM(valor) FROM vendas;
+
+🔹 evolua:
+SELECT produto, SUM(valor)
+FROM vendas
+GROUP BY produto;
+
+🔹 Introduz regra de negócio:
+SELECT produto, SUM(valor)
+FROM vendas
+GROUP BY produto
+HAVING SUM(valor) > 1000;
+
+🔹 ordenação:
+SELECT produto, SUM(valor) AS total
+FROM vendas
+GROUP BY produto
+ORDER BY total DESC;
+
+
+=========================================
+
+🚀 Análise de Vendas (SQL)
+
+
+O aluno deverá analisar dados de vendas e gerar insights utilizando funções agregadas e agrupamentos.
+
+📦 Contexto do Projeto
+
+Você foi contratado como analista de dados de uma empresa de e-commerce.
+
+Sua missão é analisar as vendas e responder perguntas estratégicas para o negócio.
+
+
+🔹 Nível 1 – Básico
+Quantidade total de vendas realizadas
+Valor total vendido
+Ticket médio (média de valor_total)
+
+🔹 Nível 2 – Agrupamentos
+Total vendido por produto
+Total vendido por categoria
+Quantidade de vendas por cliente
+
+🔹 Nível 3 – Filtros com HAVING
+Produtos que venderam mais de R$ 1.000
+Categorias com média de venda acima de R$ 200
+Clientes que fizeram mais de 5 compras
+
+🔹 Nível 4 – Análise mais real
+Top 5 produtos mais vendidos (em valor)
+Cidade com maior volume de vendas
+Média de vendas por estado
+
+🔹 Nível 5 – Desafio bônus (pensamento analítico)
+Existe algum produto com preço alto mas pouca venda?
+Existe cliente com muitas compras mas baixo valor total?
+Qual categoria é mais “lucrativa” (maior soma de vendas)?
+
+
+
+
+
+
+
+
+
