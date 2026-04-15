@@ -1,0 +1,54 @@
+Exercício Prático – DML (INSERT, UPDATE, DELETE).
+
+Você foi contratado para ajustar a base de dados de uma loja.
+
+Crie uma tabela:
+
+    id_cliente INT,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    status VARCHAR(20)
+
+
+Insira um cliente:
+
+id: 1
+nome: Carlos
+email: carlos@email.com
+status: ativo
+
+Insira os seguintes clientes:
+
+
+2	Ana	ana@email.com	ativo
+3	João	joao@email.com	inativo
+4	Maria	maria@email.com	ativo
+
+Atualização simples
+
+Atualize o cliente João para status = ativo
+
+Atualize todos os clientes com status ativo para:
+
+status = 'cliente_ativo'
+
+Execute:
+
+UPDATE clientes
+SET status = 'erro';
+
+O que aconteceu?
+
+Delete com condição
+
+Remova o cliente com id = 3
+
+Delete com regra
+
+Remova todos os clientes com status inativo
+
+Execute:
+
+DELETE FROM clientes;
+
+O que aconteceu com os dados?
