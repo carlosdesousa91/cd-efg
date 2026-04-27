@@ -22,7 +22,7 @@ O time precisa estruturar os dados para análise e tomada de decisão.
 
 📁 Dados fornecidos
 
-Você pode dar:
+
 
 CSV com erros (igual os que você já criou)
 Ou pedir que cada grupo gere/importe dados
@@ -115,7 +115,6 @@ Apresentação
 
 💡 Diferencial (vale bônus)
 Uso de:
-Views
 Subqueries avançadas
 JOINs complexos
 Organização do código
