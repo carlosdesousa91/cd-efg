@@ -1,0 +1,121 @@
+🎯 Objetivo do Projeto
+
+Os alunos deverão:
+
+Planejar um ambiente de dados
+Modelar banco de dados (conceitual → físico)
+Criar estrutura no banco (DDL)
+Inserir e manipular dados (DML)
+Realizar limpeza e transformação com Python
+Executar consultas SQL (básicas e avançadas)
+Simular um fluxo ETL
+Apresentar insights
+
+👥 Organização
+Grupos de 2 a 4 alunos
+Entrega final + apresentação
+
+📦 Cenário
+
+Uma empresa de e-commerce possui dados desorganizados de vendas.
+O time precisa estruturar os dados para análise e tomada de decisão.
+
+📁 Dados fornecidos
+
+Você pode dar:
+
+CSV com erros (igual os que você já criou)
+Ou pedir que cada grupo gere/importe dados
+
+Sugestão de tabelas:
+
+clientes
+produtos
+vendas
+
+🧩 Etapas do Projeto
+🔹 1. Planejamento
+Definir estrutura do banco
+Identificar entidades e relacionamentos
+Criar um DER
+
+👉 Entrega:
+
+Diagrama (imagem ou draw.io)
+
+
+🔹 2. Modelagem
+Converter modelo conceitual → físico
+
+👉 Entrega:
+
+Script SQL com CREATE TABLE
+
+🔹 3. Criação do Banco (DDL)
+Criar tabelas
+Definir tipos de dados
+(Opcional) PK e FK
+
+🔹 4. Inserção de Dados (DML)
+Inserir dados manualmente ou via script
+Corrigir inconsistências
+
+🔹 5. ETL com Python
+Ler dataset (CSV/Excel)
+Tratar dados (tipos, nulos, erros)
+Preparar dados para carga
+
+👉 Pode usar:
+
+Pandas
+
+🔹 6. Carga no Banco
+Inserir dados tratados no banco
+(via SQL ou Python)
+
+🔹 7. Consultas SQL
+
+Criar pelo menos:
+
+📊 Consultas obrigatórias:
+Total de vendas por produto
+Total de vendas por cliente
+Produtos mais vendidos
+Clientes sem compra (usar JOIN ou subquery)
+Consulta com GROUP BY + HAVING
+Consulta com JOIN (mínimo 2 tabelas)
+Consulta com subquery
+
+
+🔹 8. Análise (OLAP básico)
+Criar insights simples:
+
+Exemplo:
+
+Produto mais vendido
+Cliente que mais comprou
+Ticket médio
+
+🔹 10. Apresentação
+
+Cada grupo deve apresentar:
+
+Estrutura criada
+Problemas encontrados
+Soluções aplicadas
+Insights gerados
+
+
+📊 Entregáveis
+Script SQL (DDL + DML)
+Código Python (ETL)
+DER (imagem)
+Documento ou slides com análise
+Apresentação
+
+💡 Diferencial (vale bônus)
+Uso de:
+Views
+Subqueries avançadas
+JOINs complexos
+Organização do código
