@@ -1,0 +1,28 @@
+📦 📊 DATASET OFICIAL DO PROJETO
+📁 Arquivo: clientes.csv
+id_cliente,nome,email,cidade
+1,Carlos,carlos@email.com,Brasilia
+2,Ana,ana@email,Goiania
+3,João,,Sao Paulo
+4,Maria,maria@email.com,
+5,Pedro,pedro@email.com,Rio de Janeiro
+
+📁 Arquivo: produtos.csv
+id_produto,nome_produto,preco
+1,Notebook,3500
+2,Mouse,50
+3,Teclado,120
+4,Monitor,abc
+5,Cadeira,800
+
+📁 Arquivo: vendas.csv
+id_venda,id_cliente,id_produto,data,quantidade
+1,1,1,2024-01-10,1
+2,1,2,10/01/2024,2
+3,2,3,2024/01/11,1
+4,3,4,2024-01-12,1
+5,6,1,2024-01-13,1
+6,2,5,,2
+7,4,2,2024-01-14,dois
+
+
