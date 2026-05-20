@@ -1,0 +1,98 @@
+Projeto: Sistema de Controle de Estoque Simples
+
+Nível: Intermediário
+Conteúdos praticados: funções, if/else, laços de repetição, listas, dicionários e menu interativo.
+
+Objetivo
+
+Criar um sistema em Python para controlar o estoque de produtos de uma pequena loja.
+
+O programa deverá permitir cadastrar produtos, listar produtos, atualizar quantidade, remover produtos e consultar produtos com baixo estoque.
+
+Requisitos do sistema
+
+O sistema deve funcionar por meio de um menu no terminal:
+
+1 - Cadastrar produto
+2 - Listar produtos
+3 - Atualizar estoque
+4 - Remover produto
+5 - Ver produtos com baixo estoque
+6 - Sair
+
+Estrutura sugerida do produto
+
+Cada produto pode ser armazenado em um dicionário:
+
+produto = {
+    "codigo": 1,
+    "nome": "Arroz",
+    "quantidade": 20,
+    "preco": 25.90
+}
+
+E todos os produtos podem ficar dentro de uma lista:
+
+estoque = []
+
+Funções obrigatórias
+
+O aluno deve implementar pelo menos as seguintes funções:
+
+def exibir_menu():
+    pass
+
+def cadastrar_produto(estoque):
+    pass
+
+def listar_produtos(estoque):
+    pass
+
+def atualizar_estoque(estoque):
+    pass
+
+def remover_produto(estoque):
+    pass
+
+def produtos_baixo_estoque(estoque):
+    pass
+    
+Regras do projeto
+O programa deve repetir o menu até o usuário escolher a opção 6 - Sair.
+Não deve permitir cadastrar dois produtos com o mesmo código.
+A quantidade do produto não pode ser negativa.
+O preço do produto deve ser maior que zero.
+A opção de baixo estoque deve mostrar produtos com quantidade menor ou igual a 5.
+O programa deve mostrar mensagens claras para o usuário.
+
+
+Exemplo de funcionamento
+===== SISTEMA DE ESTOQUE =====
+1 - Cadastrar produto
+2 - Listar produtos
+3 - Atualizar estoque
+4 - Remover produto
+5 - Ver produtos com baixo estoque
+6 - Sair
+
+Escolha uma opção: 1
+
+Código do produto: 101
+Nome do produto: Teclado
+Quantidade: 3
+Preço: 89.90
+
+Produto cadastrado com sucesso!
+
+
+Critérios de avaliação
+
+O projeto será avaliado considerando:
+
+Uso correto de funções;
+Uso de estruturas condicionais;
+Uso de laço de repetição;
+Organização do código;
+Validação das entradas;
+Funcionamento completo do menu;
+Clareza nas mensagens exibidas ao usuário.

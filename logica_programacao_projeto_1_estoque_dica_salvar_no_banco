@@ -1,0 +1,98 @@
+Dica: Salvando os dados em JSON (Simulando um Banco de Dados)
+
+Uma forma simples de armazenar os produtos cadastrados é utilizar um arquivo .json.
+
+O JSON funciona muito bem para guardar listas e dicionários do Python.
+
+Estrutura esperada do arquivo
+
+Exemplo do arquivo estoque.json:
+
+[
+    {
+        "codigo": 1,
+        "nome": "Teclado",
+        "quantidade": 10,
+        "preco": 99.9
+    },
+    {
+        "codigo": 2,
+        "nome": "Mouse",
+        "quantidade": 5,
+        "preco": 49.9
+    }
+]
+Importando a biblioteca
+
+O Python já possui uma biblioteca pronta para trabalhar com JSON:
+
+import json
+Função para salvar os dados
+
+Essa função recebe a lista de produtos e salva no arquivo:
+
+def salvar_dados(estoque):
+    with open("estoque.json", "w", encoding="utf-8") as arquivo:
+        json.dump(estoque, arquivo, indent=4, ensure_ascii=False)
+Explicação rápida
+Comando	Função
+"w"	Abre o arquivo para escrita
+indent=4	Deixa o JSON organizado
+ensure_ascii=False	Permite acentos corretamente
+Função para carregar os dados
+
+Quando o programa iniciar, ele pode carregar os produtos já cadastrados:
+
+def carregar_dados():
+    try:
+        with open("estoque.json", "r", encoding="utf-8") as arquivo:
+            return json.load(arquivo)
+
+    except FileNotFoundError:
+        return []
+Como usar no programa principal
+
+Ao iniciar:
+
+estoque = carregar_dados()
+
+Depois de cadastrar, remover ou atualizar produtos:
+
+salvar_dados(estoque)
+Exemplo completo
+import json
+
+def salvar_dados(estoque):
+    with open("estoque.json", "w", encoding="utf-8") as arquivo:
+        json.dump(estoque, arquivo, indent=4, ensure_ascii=False)
+
+def carregar_dados():
+    try:
+        with open("estoque.json", "r", encoding="utf-8") as arquivo:
+            return json.load(arquivo)
+
+    except FileNotFoundError:
+        return []
+
+estoque = carregar_dados()
+
+produto = {
+    "codigo": 1,
+    "nome": "Monitor",
+    "quantidade": 3,
+    "preco": 899.90
+}
+
+estoque.append(produto)
+
+salvar_dados(estoque)
+
+print("Dados salvos com sucesso!")
+Desafio para os alunos
+
+Tente implementar:
+
+Salvamento automático ao cadastrar produtos;
+Atualização automática do arquivo ao remover itens;
+Backup do estoque em outro arquivo;
+Verificação se o arquivo JSON está vazio.
