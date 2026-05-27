@@ -18,11 +18,15 @@ def cadastrar_produto():
     lista_de_codigos_dos_produtos = []
     for produto_um_por_um in todos_os_dados_dos_produtos:
         lista_de_codigos_dos_produtos.append(produto_um_por_um['codigo'])
-    
+ 
     #codigo = input("digite o código do produto ")
     # Cria o código automaticamente.
     quantidade_de_produtos = len(carregar_dados())
     codigo = quantidade_de_produtos + 1 
+    
+    for item_da_lista_de_codigos in lista_de_codigos_dos_produtos:
+        if item_da_lista_de_codigos == codigo:
+            codigo = codigo + 1
 
     
     #Recebe os campos digitados pelo usuário.
@@ -62,6 +66,5 @@ def exibir_menu():
         elif opcao_escolhida == 2: 
             listar_produtos()
         
-
 
 exibir_menu()
