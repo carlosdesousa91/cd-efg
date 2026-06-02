@@ -31,8 +31,17 @@ def cadastrar_produto():
     
     #Recebe os campos digitados pelo usuário.
     nome = input("digite o nome do produto ")
-    quantidade = input("digite a quantidade de produtos ")
-    preco = input("digite o preço do produto ")
+    
+    quantidade = int(input("digite a quantidade de produtos "))
+    while quantidade <= 0:
+        print("error: a quantidade não pode ser menor ou igual a zero!")
+        quantidade = int(input("digite a quantidade de produtos "))
+    
+    
+    preco = float(input("digite o preço do produto "))
+    while preco <= 0:
+        print("error: O preço do produto deve ser maior que zero.")
+        preco = float(input("digite o preço do produto "))
 
     produtos = carregar_dados()
     produtos.append(
@@ -46,6 +55,46 @@ def cadastrar_produto():
     
     salvar_dados(produtos)
     print("produto cadastrado com sucesso!")
+
+def atualizar_estoque():
+    #
+    #
+    #
+    pass
+
+def produtos_baixo_estoque():
+    lista_de_produtos = carregar_dados()
+    for produto in lista_de_produtos:
+        if int(produto["quantidade"]) <= 5:
+            print("Produto com baixo estoque:")
+            print("Código: ", produto["codigo"])
+            print("Nome: ", produto["nome"])
+            print("Quantidade: ", produto["quantidade"])
+            print("Preço: ", produto["preco"])
+            print("------------------------------------")
+
+def remover_produto():
+    lista_de_produtos = carregar_dados()
+    id_do_produto_removido = input("digite o id do produto que deseja remover: ")
+    for produto in lista_de_produtos:
+        if id_do_produto_removido == produto["codigo"]:
+            lista_de_produtos.remove(produto)
+
+    salvar_dados(lista_de_produtos)
+            
+def atualizar_estoque():
+    lista_de_produtos = carregar_dados()
+    id_do_produto_removido = int(input("digite o id do produto que deseja atualizar: "))
+    for produto in lista_de_produtos:
+        if id_do_produto_removido == int(produto["codigo"]):
+            #nome
+            produto["nome"] = input("digite no novo nome para o produto.")
+            #quantidate
+            produto["quantidade"] = input("digite a nova quantidade de produtos.")
+            #preco
+            produto["preco"] = input("digite o novo preço do produto")
+            
+    salvar_dados(lista_de_produtos)
 
 def exibir_menu():
     
@@ -65,6 +114,12 @@ def exibir_menu():
             cadastrar_produto()
         elif opcao_escolhida == 2: 
             listar_produtos()
+        elif opcao_escolhida == 5: 
+            produtos_baixo_estoque()
+        elif opcao_escolhida == 4:
+            remover_produto()
+        elif opcao_escolhida == 3:
+            atualizar_estoque()
         
 
 exibir_menu()
