@@ -1,0 +1,72 @@
+Exercício 10 – Tabela de Vendas
+
+Considere a matriz:
+
+vendas = [
+    [120, 150, 180],
+    [90, 100, 110],
+    [200, 210, 220]
+]
+
+Onde:
+
+Linha = vendedor
+Coluna = mês
+
+Calcule:
+
+Total vendido por vendedor
+Total vendido pela empresa
+Melhor vendedor
+
+
+⭐ Desafio
+
+Crie uma matriz 5x4 onde:
+
+Cada linha representa um aluno
+Cada coluna representa uma disciplina
+
+O programa deve:
+
+✅ Calcular média de cada aluno
+
+✅ Mostrar o aluno com maior média
+
+✅ Mostrar a média da turma
+
+✅ Informar quantos alunos foram aprovados (média ≥ 7)
+
+🚀 Desafio Avançado – Boletim Escolar
+
+Utilizando:
+
+alunos = ["Ana", "Carlos", "Maria", "João"]
+
+e a matriz de notas,
+
+gere um relatório:
+
+=========================
+BOLETIM DA TURMA
+=========================
+
+Ana
+Notas: [8, 7, 9]
+Média: 8.0
+
+Carlos
+Notas: [6, 10, 8]
+Média: 8.0
+
+Maria
+Notas: [7, 8, 9]
+Média: 8.0
+
+João
+Notas: [5, 6, 7]
+Média: 6.0
+
+Média da turma: 7.5
+Melhor nota: 10
+Pior nota: 5

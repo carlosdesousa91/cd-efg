@@ -1,0 +1,137 @@
+Exercício Prático – Matrizes e Listas em Python
+🎯 Objetivo
+
+Praticar:
+
+Listas
+Matrizes (listas de listas)
+Laços de repetição (for)
+Operações de soma, média, máximo e mínimo
+Manipulação de dados.
+
+
+📚 Contexto
+
+Uma escola armazenou as notas de seus alunos em uma matriz.
+
+Cada linha representa um aluno.
+
+Cada coluna representa uma nota.
+
+Aluno	Nota 1	Nota 2	Nota 3
+Ana	8	7	9
+Carlos	6	10	8
+Maria	7	8	9
+João	5	6	7
+
+A matriz será:
+
+notas = [
+    [8, 7, 9],
+    [6, 10, 8],
+    [7, 8, 9],
+    [5, 6, 7]
+]
+
+
+Exercício 1 – Mostrar a Matriz
+
+Utilize um for para mostrar todas as linhas da matriz.
+
+Saída esperada:
+
+[8, 7, 9]
+[6, 10, 8]
+[7, 8, 9]
+[5, 6, 7]
+
+
+Exercício 2 – Mostrar Todos os Valores
+
+Mostre todos os números da matriz individualmente.
+
+Exemplo:
+
+8
+7
+9
+6
+10
+8
+...
+
+
+Exercício 3 – Soma Total das Notas
+
+Calcule a soma de todas as notas da matriz.
+
+Resultado esperado:
+
+Soma total: 80
+
+
+Exercício 4 – Média Geral
+
+Calcule a média de todas as notas.
+
+Resultado esperado:
+
+Média geral: 7.27
+
+
+Exercício 5 – Maior Nota
+
+Encontre a maior nota presente na matriz.
+
+Resultado esperado:
+
+Maior nota: 10
+
+
+Exercício 6 – Menor Nota
+
+Encontre a menor nota presente na matriz.
+
+Resultado esperado:
+
+Menor nota: 5
+
+
+Exercício 7 – Média por Aluno
+
+Mostre a média de cada aluno.
+
+Exemplo:
+
+Aluno 1: 8.0
+Aluno 2: 8.0
+Aluno 3: 8.0
+Aluno 4: 6.0
+
+
+Exercício 8 – Alunos Aprovados
+
+Considere:
+
+Média ≥ 7 → Aprovado
+
+Mostre quais alunos foram aprovados.
+
+Exemplo:
+
+Aluno 1 - Aprovado
+Aluno 2 - Aprovado
+Aluno 3 - Aprovado
+Aluno 4 - Reprovado
+
+
+Exercício 9 – Soma por Coluna
+
+Calcule a soma de cada coluna.
+
+Exemplo:
+
+Nota 1: 26
+Nota 2: 31
+Nota 3: 33
+
