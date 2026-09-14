@@ -72,11 +72,6 @@ dos produtos.
 
 Dica: utilize _source.
 
-4. Ordenando os resultados
-Questão 7
-
-Ordene os produtos pelo preço, do mais barato para o mais caro.
-
 Questão 8
 
 Retorne somente os 3 produtos mais caros.
