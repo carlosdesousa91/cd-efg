@@ -24,6 +24,9 @@ Pergunta 1
 Insira os seguintes documentos:
 
 POST produtos/_bulk
+{"index":{"_id":"1"}}{"nome":"Notebook","categoria":"informatica","marca":"Dell","preco":3500,"estoque":10}{"index":{"_id":"2"}}{"nome":"Mouse","categoria":"informatica","marca":"Logitech","preco":120,"estoque":50}{"index":{"_id":"3"}}{"nome":"Teclado","categoria":"informatica","marca":"Logitech","preco":200,"estoque":30}{"index":{"_id":"4"}}{"nome":"Monitor","categoria":"informatica","marca":"Samsung","preco":1500,"estoque":15}{"index":{"_id":"5"}}{"nome":"Celular","categoria":"telefonia","marca":"Samsung","preco":2500,"estoque":20}{"index":{"_id":"6"}}{"nome":"Fone","categoria":"audio","marca":"JBL","preco":300,"estoque":40}{"index":{"_id":"7"}}{"nome":"Caixa de Som","categoria":"audio","marca":"JBL","preco":500,"estoque":25}{"index":{"_id":"8"}}{"nome":"Smartwatch","categoria":"telefonia","marca":"Samsung","preco":1000,"estoque":12}
+
+POST produtos/_bulk
 {"index":{"_id":"1"}}
 {"nome":"Notebook","categoria":"informatica","marca":"Dell","preco":3500,"estoque":10}
 {"index":{"_id":"2"}}
