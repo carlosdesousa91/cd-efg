@@ -1,0 +1,31 @@
+1 - conferir se tem o python
+
+2 - Criar uma pasta na área de trabalho.
+
+3 - Acessar a pasta via terminal.
+
+4 - Criar uma venv dentro da pasta via terminal:
+python -m venv venv
+
+5 - Ativar a venv:
+.\venv\Scripts\Activate.ps1
+
+6 - instalar o requests e o pandas:
+pip install requests pandas
+
+7 - criar um arquivo chamado main.py:
+import requests
+
+URL = (
+    "https://servicodados.ibge.gov.br"
+    "/api/v1/localidades/estados/52/municipios"
+)
+
+resposta = requests.get(URL, timeout=20)
+resposta.raise_for_status()
+municipios = resposta.json()
+print(len(municipios))
+print(municipios[0]["nome"])
+
+8 - executar o script:
+python main.py
