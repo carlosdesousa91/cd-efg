@@ -7,8 +7,11 @@
 4 - Criar uma venv dentro da pasta via terminal:
 python -m venv venv
 
+
 5 - Ativar a venv:
 .\venv\Scripts\Activate.ps1
+se der erro ao ativar a venv, execute este comando:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 6 - instalar o requests e o pandas:
 pip install requests pandas
